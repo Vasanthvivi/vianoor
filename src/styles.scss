@@ -1,0 +1,60 @@
+// HEADER
+li {
+    display: block;
+    font-weight: 700;
+    // color: rgb(53, 52, 53);
+    font-size: 15px;
+    line-height: 1;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.nav-link.active {
+    color: rgb(0, 142, 98) !important;
+}
+
+
+svg {
+    width: 30px;
+    height: 21px;
+    margin-top: -5px;
+}
+
+.brand-logo svg {
+    width: 245px;
+    height: 63px;
+    .cls-1 {
+        fill: rgb(0, 93, 86) !important;
+    }
+
+}
+
+a:hover {
+    color: rgb(0, 142, 98) !important;
+}
+
+
+a::after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: -6px;
+    width: 0px;
+    height: 0.5px;
+    will-change: width;
+    background-color: rgb(53, 52, 53);
+    transition: width 0.3s;
+}
+
+
+a:hover::after, a.active::after {
+    width: 100%;
+}
+
+//
