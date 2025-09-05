@@ -18,18 +18,20 @@
     }
 }
 
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 5s ease-out forwards;
-}
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
 }
+
+.fade-in-up {
+    opacity: 0.5;
+    transform: translateY(40px) !important;
+    animation: fadeInUp 1s ease-out forwards !important;
+}
+
 
 
 .play-button:hover {
@@ -130,6 +132,7 @@ li {
 .play-button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
 .scroll-arrow {
     // position: absolute;
     bottom: 50px;
@@ -157,7 +160,7 @@ svg {
     }
 }
 
-.down-arr{
+.down-arr {
     fill: white !important;
 }
 
@@ -218,4 +221,35 @@ a.active::after {
     font-weight: normal;
     line-height: 1.2;
     // visibility: hidden;
+}
+
+.video-header-wr video {
+    object-fit: cover;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.fade-in-text {
+    color: #1a202c;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0.2;
+    transform: translateY(20px);
+    animation: fadeInAndSlideUp 2.5s forwards;
+}
+
+@keyframes fadeInAndSlideUp {
+    from {
+        opacity: 0.2;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
 }

@@ -29,6 +29,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/video.js/dist/video-js.css",
               "src/styles.scss"
             ],
             "scripts": []

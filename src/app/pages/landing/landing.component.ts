@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy, Renderer2 } from '@angular/core';
-
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import videojs from 'video.js';
+import type Player from 'video.js/dist/types/player';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -7,54 +8,37 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy, Ren
 })
 export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+  // @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
   isPlaying = false;
+  @ViewChild('target', { static: false }) target!: ElementRef;
+  player!: Player | any;
 
-  // Arrow functions to preserve `this` context for event listeners
-  private onPlay = () => this.isPlaying = true;
-  private onPause = () => this.isPlaying = false;
-
-  constructor(private renderer: Renderer2) { }
-
-  ngOnInit() {
+  constructor() { }
+  ngOnInit(): void {
+    
   }
 
-  ngAfterViewInit() {
-    const video = this.videoPlayer.nativeElement;
-
-    // Muted autoplay is generally allowed, but to be certain, we can try to play it programmatically.
-    // This is more robust against different browser policies.
-    try {
-      setTimeout(() => {
-        window.focus();
-        this.renderer.selectRootElement('body', true).focus();
-        video.play().then(() => {
-          // Autoplay started successfully. `isPlaying` will be set by the 'play' event listener.
-        }).catch(error => {
-          console.error('Video autoplay was prevented:', error);
-          // Autoplay was prevented. The user needs to interact with the page first.
-          this.isPlaying = false;
-          video.play();
+  ngAfterViewInit(): void {
+    this.player = videojs(this.target.nativeElement, {
+      autoplay: 'muted',
+      muted: true,
+      loop: true,
+      playsinline: true,
+      controls: false
+    });
+ 
+    this.player.ready(() => {
+      if(this.player != undefined){
+        this.player.play().catch((err: any) => {
+          console.warn('Autoplay blocked, waiting for user interaction', err);
         });
-
-        // Sync the isPlaying state with the video's events
-        video.addEventListener('play', this.onPlay);
-        video.addEventListener('pause', this.onPause);
-      }, 0);
-      
-    } catch (error) {
-    }
+      }
+    });
   }
-
+ 
   ngOnDestroy(): void {
-    // It's a good practice to clean up event listeners to prevent memory leaks
-    const video = this.videoPlayer.nativeElement;
-    video.removeEventListener('play', this.onPlay);
-    video.removeEventListener('pause', this.onPause);
-  }
-
-  toggleVideoPlayback(): void {
-    const video = this.videoPlayer.nativeElement;
-    video.paused ? video.play() : video.pause();
+    if (this.player) {
+      this.player.dispose();
+    }
   }
 }
