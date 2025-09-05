@@ -39,7 +39,7 @@ jobs:
         # IMPORTANT: Replace 'vialoor-base' with your GitHub repository name if it's different.
         # The --base-href flag is crucial for routing to work correctly on GitHub Pages.
         # It assumes your Angular project name is 'vianoor-base'. If not, adjust the output path in the next step.
-        run: npm run build -- --configuration production --base-href /https://vasanthvivi.github.io/vianoor/
+        run: npm run build -- --configuration production --base-href /"https://vasanthvivi.github.io/vianoor"/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
