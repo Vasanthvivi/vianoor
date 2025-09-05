@@ -23,13 +23,17 @@
 }
 
 .scroll-arrow {
-    position: absolute;
+    // position: absolute;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     color: white;
     font-size: 2rem;
+    padding-top: 50px;
+    font-size: 57px;
+    height: 100px;
+    width: 100px;
     animation: bounce 2s infinite;
 }
 
@@ -75,7 +79,8 @@
     }
 }
 
-a,li{
+a,
+li {
     color: white !important;
 }
 
@@ -113,7 +118,7 @@ a,li{
 }
 
 .scroll-arrow {
-    position: absolute;
+    // position: absolute;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -133,14 +138,20 @@ svg {
     width: 30px;
     height: 21px;
     margin-top: -5px;
+
     .cls-1 {
         fill: rgb(255, 255, 255) !important;
     }
 }
 
+.down-arr{
+    fill: white !important;
+}
+
 .brand-logo svg {
     width: 245px;
     height: 63px;
+
     .cls-1 {
         fill: rgb(255, 255, 255) !important;
     }
@@ -167,14 +178,31 @@ a::after {
 }
 
 
-a:hover::after, a.active::after {
+a:hover::after,
+a.active::after {
     width: 100%;
 }
 
-.landing-header{
+.landing-header {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1
+}
+
+.hero-row {
+    height: 100vh;
+    min-height: 637px;
+}
+
+.hero-top h1 {
+    font-size: 90px;
+    font-family: "Jacquard 24", "Raleway", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    line-height: 1.2;
+    // visibility: hidden;
 }
