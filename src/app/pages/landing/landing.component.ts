@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
@@ -14,7 +14,7 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
   private onPlay = () => this.isPlaying = true;
   private onPause = () => this.isPlaying = false;
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
   }
@@ -26,6 +26,8 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
     // This is more robust against different browser policies.
     try {
       setTimeout(() => {
+        window.focus();
+        this.renderer.selectRootElement('body', true).focus();
         video.play().then(() => {
           // Autoplay started successfully. `isPlaying` will be set by the 'play' event listener.
         }).catch(error => {
@@ -38,7 +40,8 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
         // Sync the isPlaying state with the video's events
         video.addEventListener('play', this.onPlay);
         video.addEventListener('pause', this.onPause);
-      }, 2000);
+      }, 0);
+      
     } catch (error) {
     }
   }
