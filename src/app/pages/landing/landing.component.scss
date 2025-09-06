@@ -772,3 +772,204 @@ img {
         margin-left: 0px !important;
     }
 }
+
+//MORE ABOUT US
+.abtVideo {
+    height: 450px !important;
+    width: 100% !important;
+}
+
+.default-vid .vjs-big-play-button {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border-width: 3px;
+    background-color: transparent !important;
+    background-image: url("../../../assets/play-icon-outline.svg");
+    // background-image: url("../../../assets/bg-pattern.png");
+    background-repeat: no-repeat;
+    -webkit-background-position: -webkit-calc(50% + 3px) center;
+    background-position: calc(50% + 3px) center;
+    background-size: 24px;
+    -webkit-transition: all 0.4s !important;
+    -o-transition: all 0.4s !important;
+    transition: all 0.4s !important;
+}
+
+// .vjs-poster{
+//     background-image: ;
+// }
+.vjs-icon-play:before,
+.video-js .vjs-play-control .vjs-icon-placeholder:before,
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+    content: "" !important;
+}
+
+.testmslider blockquote {
+    padding-top: 20px;
+    font-size: 21px;
+    color: #008e62;
+    line-height: 1.4;
+    min-height: 240px;
+}
+
+.testmslider blockquote {
+    font-size: 19px;
+}
+
+.testmslider cite {
+    font-size: 20px;
+}
+
+.testmslider cite {
+    display: block;
+    font-style: italic;
+    line-height: 1.4;
+    padding-bottom: 50px;
+}
+
+.testmslider cite strong,
+.testmslider cite span {
+    display: block;
+}
+
+.testmslider cite strong {
+    font-weight: 700;
+}
+
+.testmslider cite span {
+    font-weight: 500 !important;
+}
+
+.get-in-touch-content {
+    padding-top: 40px !important;
+}
+
+.h-link {
+    position: relative;
+    top: -8px;
+}
+
+.h-link a {
+    color: #ee7869 !important;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 600;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    border-bottom-color: transparent !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ee7869), to(#ee7869));
+    background-image: -webkit-linear-gradient(#ee7869, #ee7869);
+    background-image: -o-linear-gradient(#ee7869, #ee7869);
+    background-image: linear-gradient(#ee7869, #ee7869);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+@keyframes linkAnim {
+    0% {
+        background-position: right bottom;
+        background-size: 100% 1px
+    }
+
+    50% {
+        background-position: right bottom;
+        background-size: 0% 1px
+    }
+
+    51% {
+        background-position: left bottom;
+        background-size: 0% 1px
+    }
+
+    100% {
+        background-image: linear-gradient(#ee7869, #ee7869);
+        background-position: left bottom;
+        background-size: 100% 1px
+    }
+}
+
+.h-link a:hover {
+    -webkit-animation: linkAnim 0.5s ease;
+    animation: linkAnim 0.5s ease;
+}
+// IN THE NEWS
+.title.has-border h2 {
+    border-bottom: 1px solid #008e62;
+}
+.featured-content {
+    padding-top: 25px;
+}
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.featured-content .swiper-slide {
+    padding-left: 20px;
+}
+.featured-content .swiper-slide a {
+    text-decoration: none !important;
+    color: #008e62 !important;
+}
+.featured-content .swiper-slide .ns-src {
+    padding-top: 25px;
+    line-height: 1.4;
+    font-size: 19px;
+    font-weight: 600;
+    color: #231f20;
+}
+.featured-content .swiper-slide a h3 {
+    font-weight: 400;
+    font-size: 21px;
+}
+.featured-row{
+    margin-top: 15px;
+}
+//FOOTER
+.footer-main {
+    padding: 25px 0;
+    background-color: #53676c;
+    background-image: url("../../../assets/footer-bg.jpg");
+    font-family: 'Raleway', system-ui;
+    // background-image: url("../../../assets/play-icon-outline.svg");
+
+}
+.footer-main .footer-nav .nav li a, .footer-main .f-left {
+    font-size: 18px;
+}
+.footer-main .f-left {
+    font-size: 20px;
+    font-weight: 500;
+    color: #9cc6b5;
+}
+.footer-main .footer-nav {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.footer-main .footer-nav .nav li {
+    padding: 0 10px;
+}
+.footer-nav .nav li {
+    position: relative;
+}
+.footer-main .footer-nav .nav li a, .footer-main .f-left {
+    font-size: 18px;
+}
+.footer-main .footer-nav .nav li a {
+    font-weight: 500;
+    font-size: 20px;
+    display: block;
+    text-decoration: none !important;
+    color: #9cc6b5;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
