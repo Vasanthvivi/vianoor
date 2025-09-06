@@ -1,5 +1,11 @@
+:root {
+    --primary: #008e62;
+    --hfont: 'Jacquard 24','Dala Prisma';
+    --darkg: #226F56;
+    --bfont: 'Raleway';
+}
 // HEADER
-li {
+.navbar-nav li {
     display: block;
     font-weight: 700;
     // color: rgb(53, 52, 53);

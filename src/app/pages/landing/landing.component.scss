@@ -1,4 +1,6 @@
 //arrow animation
+// @use './landing-forked.scss';
+
 @keyframes bounce {
 
     0%,
@@ -194,10 +196,11 @@ a::after {
 }
 
 
-a:hover::after,
-a.active::after {
+.navbar-nav a:hover::after,
+.navbar-nav a.active::after {
     width: 100%;
 }
+
 
 .landing-header {
     position: absolute;
@@ -251,5 +254,521 @@ a.active::after {
     to {
         opacity: 1;
         transform: translateY(-30px);
+    }
+}
+
+@keyframes fadeInAndSlideUpText {
+
+    // from {
+    //     opacity: 0.1;
+    //     transform: translateY(-10px);
+    // }
+
+    to {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes fadeInAndSlideDownText {
+
+    from {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 0.1;
+        transform: translateY(-10px);
+    }
+
+    // to {
+    //     opacity: 1;
+    //     transform: translateY(-30px);
+    // }
+}
+
+//CONTENT SECTION WRAPPER
+.content-section-wr {
+    display: flex;
+    background-image: url("../../../assets/bg-pattern.png");
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-section-heading {
+    font-family: "Jacquard 24",
+        "Raleway",
+        system-ui;
+    font-weight: bold;
+    color: rgb(34, 111, 86);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    font-size: 60px;
+    display: flex;
+    padding: 100px 110px;
+    align-items: center;
+    width: 100%;
+
+}
+
+.video-header-wr .vjs-controls-disabled {
+    height: 635px !important;
+}
+
+//CONENT SECTION 
+.content-body-wr {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.content-menu-wr {
+    display: flex;
+    background: white;
+    padding: 4% 4%;
+    margin: 4%;
+    flex-direction: column;
+}
+
+// CARD STYLES
+.animfadeIn {
+    will-change: transform, opacity;
+}
+
+.card-box {
+    overflow: hidden;
+}
+
+.cb-title,
+.title h2 {
+    font-size: 21px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    color: #231f20;
+    letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.cb-img {
+    position: relative;
+    // overflow: hidden;
+    color: inherit;
+    text-decoration: none !important;
+    display: block;
+}
+
+a {
+    color: #00a99d;
+    outline: none !important;
+}
+
+.img-fluid {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.cb-layer {
+    padding: 24px;
+    letter-spacing: 0.03em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #231f20;
+    height: 75px !important;
+    background-image: url('../../../assets/cb-pattern.png');
+    background-position: 0 -50px;
+    background-repeat: repeat-x;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.card-box .cb-subtitle {
+    font-weight: 500;
+    font-size: 19px;
+    color: #231f20;
+    margin: 0;
+}
+
+.cbt-wrap {
+    position: relative;
+    top: 30px;
+}
+
+.cbt-wrap .cb-text {
+    margin-top: 75px;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    transition: all 1s;
+    font-weight: 400;
+    font-family: "Raleway", system-ui;
+}
+
+.cb-body:hover {
+    .cb-text {
+        transition: all 1s !important;
+        visibility: visible;
+        animation: fadeInAndSlideUpText 1s forwards;
+    }
+
+    .cb-layer {
+        height: 100% !important;
+
+        * {
+            transition: all 1s !important;
+        }
+    }
+}
+
+.cb-body:not(:hover) {
+    .cb-text {
+        animation: fadeInAndSlideDownText 1s forwards !important;
+    }
+}
+
+.cb-img .card-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cb-img .card-link span {
+    display: inline-block;
+    border-bottom: 1px solid #231f20;
+}
+
+.card.index-card {
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    margin-top: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+}
+
+.card.card-text {
+    background: none;
+    border: none;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+.card.card-text .card-body {
+    padding: 0;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card.card-text .card-footer {
+    padding: 0;
+    border: none;
+    margin-bottom: 85px;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.ct-text {
+    font-size: 19px;
+    padding-right: 45px;
+}
+
+.ct-text ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-bullets {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+.ct-text ul>li {
+    position: relative;
+    padding: 1px 0;
+}
+
+.custom-bullets li {
+    position: relative !important;
+    padding-left: 15px !important;
+    margin-bottom: 0.5rem !important;
+    color: #231f20 !important;
+    line-height: 1.6;
+    font-family: 'Raleway', system-ui;
+    word-wrap: break-word;
+    // font-weight: 400;
+}
+
+.ct-text ul>li:before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #231f20;
+}
+
+.custom-bullets li::before {
+    /* content: "•" !important; */
+    position: absolute !important;
+    left: 0 !important;
+    top: 15px !important;
+    font-size: 1.2rem !important;
+    color: #226F56 !important;
+    line-height: 1.5 !important;
+}
+
+.know-more {
+    color: #226F56 !important;
+
+    span {
+        border-bottom: 2px solid #226F56 !important;
+    }
+}
+
+.know-more:hover {
+    svg {
+        padding-left: 30% !important;
+    }
+}
+
+//SUSTAINABILITY
+.sustainableBox {
+    position: relative;
+    display: block;
+    background-color: #9CC6B5;
+    text-decoration: none;
+    padding: 65px 32px 18px;
+}
+
+.sustainableBox:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-image: url('../../../assets/terrazzo-backgroun-hover.webp');
+    transition: 0.5s ease all;
+    background-size: 100% auto;
+    background-repeat: repeat-x;
+}
+
+.sustainableBox:hover::before {
+    height: 100%;
+    z-index: 1;
+}
+
+.sustainableBox:hover {
+    .moreLink svg {
+        transition: all 0.5s;
+        margin-left: 15px;
+    }
+}
+
+.sustainableBox:not(:hover) {
+    .moreLink svg {
+        transition: all 0.5s;
+        margin-left: 0px;
+    }
+}
+
+.sustainableBox>div {
+    position: relative;
+    z-index: 2;
+}
+
+
+.sustainableBox * {
+    text-decoration: none;
+}
+
+.sustainHeads h2 {
+    font-size: 75px;
+    font-family: var(--hfont);
+    color: var(--darkg);
+    text-align: center;
+}
+
+.sustainHeads h2 span {
+    font-size: 48px;
+    font-weight: 300;
+    font-family: var(--bfont);
+    color: var(--darkg);
+}
+
+.sustainHeads p {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 19px;
+    color: var(--darkg);
+}
+
+.plain-text {
+    padding-top: 47px;
+}
+
+.plain-text p {
+    font-family: 'Raleway';
+    font-weight: 400 !important;
+    font-size: 19px;
+    line-height: 1.4;
+    color: #121212 !important;
+}
+
+.moreLink {
+    padding-top: 38px;
+    font-weight: 600;
+    font-size: 19px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    color: #000;
+    text-decoration: none !important;
+    max-width: 260px;
+}
+
+.moreLink strong {
+    font-weight: 600 !important;
+    padding-bottom: 5px;
+}
+
+.moreLink span {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    line-height: 1.2;
+}
+
+.moreLink span {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    line-height: 1.2;
+}
+
+.girl-hair-container {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.girl-hair-container svg {
+    /* width: 100%; */
+    min-width: 141px;
+}
+
+.bottom-text {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottom-text span {
+    font-family: 'Raleway';
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    color: #226F56;
+    z-index: 9;
+}
+
+.card.card-text .cb-title,
+.card.card-text .title h2,
+.title .card.card-text h2 {
+    border-bottom: 1px solid #008e62;
+}
+
+.rent-a-villa-text {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 21px;
+    padding-left: 20px;
+    font-size: 19px;
+    padding-right: 45px;
+}
+
+.rentvilla-knowmore {
+    color: #008e62 !important;
+    border: none !important;
+    // border-bottom: 2px solid #008e62 !important;
+}
+
+.rent-villa-body:hover,
+.rentvilla-knowmore:hover {
+    .rent-villa-body svg {
+        transition: all 0.5s !important;
+        margin-left: 15px !important;
+    }
+}
+
+.rent-villa-body:not(:hover),
+.rentvilla-knowmore:not(:hover) {
+    .rent-villa-body svg svg {
+        transition: all 0.5s !important;
+        margin-left: 0px !important;
     }
 }
