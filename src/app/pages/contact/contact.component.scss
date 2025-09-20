@@ -1,0 +1,74 @@
+.pr-container {
+    border-top: 1px solid #005d56 !important;
+}
+
+.icon-wrap {
+    svg {
+        width: auto !important;
+        height: auto !important;
+    }
+}
+
+.phone-info ul {
+    font-family: "Raleway" !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.phone-info ul li {
+    padding: 5px 0;
+}
+
+.phone-info ul li a {
+    color: black !important;
+    text-decoration: none !important;
+
+    span {
+        color: #666 !important;
+    }
+}
+
+//CONTACT form
+.contact-form {
+    background-color: #9cc6b5;
+    background-image: url("../../../assets/enquire-pattern.png");
+    padding: 30px 150px;
+    color: #fff;
+    height: 100%;
+
+    input::placeholder, textarea::placeholder {
+        color: white;
+        opacity: 1;
+        /* ensures full visibility */
+    }
+}
+
+:host .contact-form .form-control,
+option {
+    background: #9cc6b5;
+    color: #fff;
+    border-color: #5a5b5d;
+    height: 42px;
+}
+
+:host .form-control {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    border-radius: 0;
+    border-color: #000;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    height: 40px;
+    background-color: transparent !important;
+}
+
+:host .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 45px;
+}

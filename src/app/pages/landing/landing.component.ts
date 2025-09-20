@@ -55,6 +55,10 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
   gotoHomes(){
     this.router.navigate(['/homes'], { relativeTo: this.route })
   }
+  
+  gotoAbout(){
+    this.router.navigate(['/about'], { relativeTo: this.route })
+  }
 
 
   ngAfterViewInit(): void {

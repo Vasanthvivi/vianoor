@@ -9,4 +9,21 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'vianoor-base';
+
+  openEnquiry(){
+    try {
+      document.getElementById("c-enq")?.classList.add('display-enq');
+    } catch (error) {
+      
+    }
+  }
+
+  closeEnq(){
+    try {
+      document.getElementById("c-enq")?.classList.remove('display-enq');
+    } catch (error) {
+      
+    }
+  }
+
 }

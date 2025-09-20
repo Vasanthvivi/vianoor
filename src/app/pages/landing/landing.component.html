@@ -83,7 +83,7 @@
               <a class="nav-link" >CONTACT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " aria-current="page">ABOUT</a>
+              <a class="nav-link " (click)="gotoAbout()" aria-current="page">ABOUT</a>
             </li>
             
             <!-- <li class="nav-item">
@@ -272,7 +272,7 @@
 
             </div>
             <div class="card-footer bg-transparent" style="margin-bottom: 0;margin-top: 20px;">
-              <a href="about.php" class="d-flex justify-content-between align-items-center card-link">
+              <a (click)="gotoAbout()" class="d-flex justify-content-between align-items-center card-link">
                 <strong class="know-more">
                   <span>Know More</span> <br><span>About Us</span>
                 </strong>
@@ -638,7 +638,7 @@
               </div>
             </div>
             <div class="card-footer bg-transparent" style="margin-bottom: 0;margin-top: 20px;">
-              <a href="about.php" class="d-flex justify-content-between align-items-center card-link">
+              <a (click)="gotoAbout()" class="d-flex justify-content-between align-items-center card-link">
                 <strong class="know-more rentvilla-knowmore">
                   <span>More About</span> <br><span>Care</span>
                 </strong>

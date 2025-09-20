@@ -1,0 +1,66 @@
+:host .video-header-wr video {
+    object-fit: none !important;
+}
+
+// breadcrumb
+.breadcrumb {
+    background-image: url("../../../assets/bg-pattern.png");
+}
+
+.breadcrumb-wr{
+    display: flex;
+    width: 100%;
+    padding-top: 30px !important;
+}
+
+.breadcrumb {
+    font-size: 18px;
+    color: #666;
+    padding-left: 110px !important;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #7d7c7d !important;
+    position: relative;
+    font-size: 19px;
+    font-family: "Raleway", sans-serif;
+}
+
+.breadcrumb a:hover {
+    color: #000;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+    color: #999;
+}
+
+.breadcrumb .active {
+    font-weight: bold;
+    // color: #444;
+}
+
+.h-link {
+    font-family: "Raleway", sans-serif !important;
+}
+
+//overriding styles for about
+.cb-body{
+    flex-grow: 1 !important;
+    a,img{
+        height: 100% !important;
+    }
+}
+.abt-by strong {
+    font-weight: 600;
+    display: block;
+    color: #226f56;
+}
+.about-card .ct-text {
+    padding: 20px 0 0 0;
+    font-size: 19px;
+    letter-spacing: 0.02em;
+    font-family: "Raleway";
+}

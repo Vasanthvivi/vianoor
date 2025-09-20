@@ -1,0 +1,154 @@
+//region breadcrumbs
+.breadcrumb {
+    font-size: 18px;
+    color: #666;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #7d7c7d !important;
+    position: relative;
+    font-size: 19px;
+    font-family: "Raleway", sans-serif;
+}
+
+.breadcrumb a:hover {
+    color: #000;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+    color: #999;
+}
+
+.breadcrumb .active {
+    font-weight: bold;
+    // color: #444;
+}
+
+.h-link {
+    font-family: "Raleway", sans-serif !important;
+}
+
+//endregion
+
+:host .content-menu-wr {
+    display: flex;
+    background: white;
+    padding: 4% 4%;
+    margin: 11% 9% !important;
+    flex-direction: column;
+}
+
+.content-section-wr {
+    background-image: url("../../../assets/a4.png");
+}
+
+:host .brand-logo svg {
+    width: 245px;
+    height: 63px;
+
+    .cls-1 {
+        fill: #005d56 !important;
+    }
+
+}
+
+//overriding header styles
+:host a {
+    font-family: "Raleway", sans-serif !important;
+}
+
+:host .nav-link.active {
+    color: rgb(34, 111, 86) !important;
+
+    ::after {
+        color: rgb(34, 111, 86) !important;
+        background: rgb(34, 111, 86) !important;
+    }
+
+    // color: rgb(255, 255, 255) !important;
+}
+
+:host .nav-link-home {
+    svg {
+        * {
+            fill: #353435 !important;
+        }
+    }
+}
+
+:host a {
+    color: #353435 !important;
+}
+
+:host a:hover {
+    color: rgb(34, 111, 86) !important;
+}
+
+:host a::after {
+    color: #353435 !important;
+    background: #353435 !important;
+
+}
+
+//property container
+.pr-container {
+    border-top: 1px solid #005d56 !important;
+}
+
+.pr-img-wr {
+    padding: 0 !important;
+}
+
+//region table styles
+table {
+    border-collapse: collapse;
+    width: 400px;
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 16px;
+}
+
+th {
+    font-weight: bold;
+}
+
+.highlight {
+    background-color: #00966b;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+//endregion
+
+//property descriptions
+.pr-description {
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    text-align: left;
+    font-family: "Raleway", sans-serif;
+    line-height: 1.6;
+    color: #231f20;
+    visibility: inherit;
+    box-sizing: border-box;
+    margin-top: 0;
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+:host .careBox span{
+    color: #353435 !important;
+    font-family: "Raleway", sans-serif !important;
+}

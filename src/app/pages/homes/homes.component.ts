@@ -20,7 +20,11 @@ export class HomesComponent implements OnInit {
   }
 
   gotoPropertyPage(){
-    this.router.navigate([])
+    this.router.navigateByUrl('/property')
+  }
+
+  gotoAbout(){
+    this.router.navigate(['/about'], { relativeTo: this.route })
   }
 
 }

@@ -111,3 +111,121 @@ body {
 // a:hover::after, a.active::after {
 //     width: 100%;
 // }
+
+//CONTACT form
+.contact-form {
+    background-color: #9cc6b5;
+    background-image: url("../assets/enquire-pattern.png");
+    padding: 30px 150px;
+    color: #fff;
+    height: 100%;
+
+    input::placeholder,
+    textarea::placeholder {
+        color: white;
+        opacity: 1;
+        /* ensures full visibility */
+    }
+}
+
+.top-right-close {
+    background-color: #9cc6b5;
+    background-image: url("../assets/enquire-pattern.png");
+    /* padding: 30px 150px; */
+    color: #fff;
+    position: relative;
+    height: 100%;
+    /* right: 20px; */
+    text-align: end;
+    cursor: pointer !important;
+
+    svg {
+        cursor: pointer !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 20px;
+    }
+}
+
+:host .contact-form .form-control,
+option {
+    background: #9cc6b5;
+    color: #fff;
+    border-color: #5a5b5d;
+    height: 42px;
+}
+
+:host .form-control {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    border-radius: 0;
+    border-color: #000;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    height: 40px;
+    background-color: transparent !important;
+}
+
+:host .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 45px;
+}
+
+.common-enquiry {
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    right: 1px;
+    top: 0px;
+    z-index: 10000 !important;
+    transition: all 0.4s !important;
+    right: -100vw !important;
+}
+
+.display-enq{
+    right: 0px !important;
+}
+
+.enquire-button {
+    /* --- Positioning and Layout --- */
+    position: fixed;
+    top: 50%;
+    right: 0;
+
+    /* --- Text Orientation --- */
+    /* Makes text vertical (reads top-to-bottom by default) */
+    writing-mode: vertical-rl;
+
+    /* --- Centering and Flipping --- */
+    /* 1. Flips the element to make text read bottom-to-top */
+    /* 2. Shifts it up by half its height for perfect vertical centering */
+    transform: translateY(-50%) rotate(180deg);
+
+    /* --- Visual Styling --- */
+    background-color: #92c9b1;
+    /* Color taken from your image */
+    color: white;
+    padding: 16px 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    /* --- Rounded Corner "Tab" Effect --- */
+    /* We style the opposite corners because of the 180-degree rotation */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.enquire-button:hover {
+    background-color: #7aabb4;
+    /* A slightly darker shade for hover */
+}
+

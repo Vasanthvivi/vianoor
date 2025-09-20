@@ -2,3 +2,81 @@
 <!-- <app-header></app-header> -->
 <!-- ROUTES -->
 <router-outlet></router-outlet>
+<!-- enquire button -->
+<a class="enquire-button" (click)="openEnquiry()">Enquire</a>
+<!-- common enquiry -->
+<div class="col-12 col-md-6 d-flex flex-column common-enquiry" id="c-enq">
+    <div (click)="closeEnq()" class="top-right-close">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#ee7869">
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+        </svg>
+    </div>
+    <div class="contact-form d-flex align-items-center">
+        <div class="contact-inner">
+            <h2>Complete the form below and our representative will contact you shortly.</h2>
+
+            <form id="frmCon" name="frmCon" method="post" action="" enctype="multipart/form-data" autocomplete="off"
+                novalidate="novalidate">
+
+                <div class="form-group">
+                    <input type="text" class="form-control p-white" placeholder="Name*" name="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control p-white" placeholder="Email*" name="email">
+                </div>
+                <div class="form-group has-phone-code">
+                    <input type="text" class="phone-input form-control p-white" placeholder="Phone*" name="phone">
+                </div>
+                <div class="form-group">
+                    <!--input type="text" class="form-control p-white" placeholder="How did you hear about us?*" name="source"-->
+                    <select name="source" id="source" class="form-control p-white">
+                        <option value="" selected="selected">How did you hear about us?</option>
+                        <option value="google">Google</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="direct_mailer">Direct Mailer</option>
+                        <option value="reference">Reference</option>
+                        <option value="press">Press</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control p-white" placeholder="Message" name="message"></textarea>
+                </div>
+                <div class="d-none form-group">
+                    <div class="captcha-sec">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="captcha-number"></div>
+                                <div class="captcha-code-put">
+                                    <input type="text" name="security" placeholder="Captcha *" id="security"
+                                        class="form-control p-white">
+                                </div>
+                            </div>
+                            <div class="col-md-4"><img src="capcha.php" id="captcha_img" alt="captcha" width="100px">
+                            </div>
+                            <div class="col-auto"><a href="javascript:void(0);"><img style="filter: invert(1);"
+                                        src="images-vianaar/refresh.svg" onclick="refresgimg()" alt="Refresh Captcha"
+                                        width="24px"></a>
+                            </div>
+                        </div>
+                        <span id="captcha_error" style="color:red; font-size: 13px;" class="errorMsg"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="promotions">
+                        <input type="checkbox" name="promotions" id="promotions" value="1">
+                        I wish to recieve offers &amp; promotions
+                    </label>
+                </div>
+                <div class="submit-button">
+                    <button type="submit" class="btn btn-lg w-100 btn-secondary"><span
+                            id="msgCon">Submit</span></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
