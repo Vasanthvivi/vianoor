@@ -3,6 +3,7 @@ import videojs from 'video.js';
 import type Player from 'video.js/dist/types/player';
 import { register } from 'swiper/element/bundle';
 import { NgFor } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 register();
 
 @Component({
@@ -46,9 +47,13 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   ];
 
-  constructor() { }
+  constructor(private router:Router, private route: ActivatedRoute) { }
   ngOnInit(): void {
     
+  }
+
+  gotoHomes(){
+    this.router.navigate(['/homes'], { relativeTo: this.route })
   }
 
 

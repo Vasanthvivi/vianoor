@@ -11,6 +11,14 @@ export const appRoutes: Routes = [
             ),
         pathMatch: 'prefix',
     },
+    {
+        path: 'homes',
+        loadComponent: () =>
+            import('./pages/homes/homes.component').then(
+                (_) => _.HomesComponent
+            ),
+        pathMatch: 'prefix',
+    },
     { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
